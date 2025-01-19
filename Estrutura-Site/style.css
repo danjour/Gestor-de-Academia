@@ -20,14 +20,40 @@ html, body {
 }
 
 .menu li {
-    display: inline-block;
     margin-right: 20px;
+    display: inline-block;
+    line-height: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .menu a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.menu a:hover {
+    color: #5085f1;
+}
+
+.menu .acesso {
+    float: right;
+}
+
+.menu .acesso a {
+    background-color: #5085f1;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.menu .acesso a:hover {
+    color: black;
+}
+
+.menu .logo {
+    float: left;
 }
