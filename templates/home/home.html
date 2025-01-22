@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
     <title>Bem vindos</title>
 </head>
 <body>
@@ -20,6 +20,9 @@
                 </ul>
             </nav>
         </div>
+        <section id="transform">
+            <p>Cuidar de você nunca foi tão fácil. Treine com a gente!</p>
+        </section> 
         <h1>Seja bem vindo ao novo projeto de Gestão de Academias</h1>
         <p>Projeto idealizado por ED e executado por ED e FG</p>
     </header>

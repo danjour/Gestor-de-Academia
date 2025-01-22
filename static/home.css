@@ -57,3 +57,20 @@ html, body {
 .menu .logo {
     float: left;
 }
+
+#transform {
+    height: 400px;
+    background-size: cover;
+    background-image: url(../static/images/foto_inicio.jpg);
+    background-attachment: fixed;
+    border-bottom: 5px solid #5085f1;
+    padding: 200px;
+}
+
+#transform p {
+    font-weight: 700;
+    font-size: 3.5rem;
+    max-width: 420px;
+    text-shadow: 3px 2px #5085f1;
+    color: white;
+  }
