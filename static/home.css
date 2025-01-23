@@ -61,7 +61,7 @@ html, body {
 #transform {
     height: 400px;
     background-size: cover;
-    background-image: url(../static/images/foto_inicio.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.8)), url(../static/images/foto_inicio.jpeg);
     background-attachment: fixed;
     border-bottom: 5px solid #5085f1;
     padding: 200px;
@@ -69,8 +69,59 @@ html, body {
 
 #transform p {
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 4rem;
     max-width: 420px;
-    text-shadow: 3px 2px #5085f1;
+    text-shadow: 5px 4px #5085f1;
     color: white;
   }
+
+.training {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    border-bottom: 5px solid #5085f1;
+}
+
+.training .start {
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: transparent;
+    background: -webkit-linear-gradient(#5085f1, #89b6f8);
+    background-clip: text;
+    margin-bottom: 30px;
+}
+
+.training h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.training p {
+    font-size: 1.1rem;
+    margin-top: 30px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.training .button {
+    color: white;
+    background-color: #5085f1;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.training .button:hover {
+    color: black;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
