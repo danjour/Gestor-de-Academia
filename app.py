@@ -40,9 +40,8 @@ def new_client(plan):
 @app.route('/payment', methods=['GET', 'POST'])
 def addclient_payment():
     if request.method == 'POST':
-        data = request.form  # Access form data
-        
-        # Extract form fields (make sure field names match your form inputs)
+        data = request.form 
+
         name = data.get('name')
         email = data.get('email')
         phone = data.get('phone')
@@ -63,7 +62,6 @@ def addclient_payment():
         age = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
 
 
-        # Insert into database
         try:
             conn = get_connection()
             cursor = conn.cursor()
