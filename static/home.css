@@ -9,7 +9,7 @@ html, body {
     background-color: black;
     color: white;
     text-align: center;
-    border-bottom: 5px solid #5085f1;
+    border-bottom: 3px solid #5085f1;
     height: 90px;
 }
 
@@ -63,7 +63,7 @@ html, body {
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.8)), url(../static/images/foto_inicio.jpeg);
     background-attachment: fixed;
-    border-bottom: 5px solid #5085f1;
+    border-bottom: 3px solid #5085f1;
     padding: 200px;
 }
 
@@ -80,7 +80,7 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 30px;
     padding-bottom: 70px;
-    border-bottom: 5px solid #5085f1;
+    border-bottom: 3px solid #5085f1;
 }
 
 .training .start {
@@ -120,8 +120,58 @@ html, body {
 
 .box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    gap: 50px;
+    gap: 70px;
+    padding: 70px;
+}
+
+.box .box1 {
+    width: 400px;
+    height: auto;
+    background-color: #f8f9fa; /* Cor clara para o fundo */
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box .box1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: #5085f1; /* Destacar a borda */
+}
+
+.box .box1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.box .box1 p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.box .box1 a {
+    display: inline-block;
+    color: white;
+    background-color: #5085f1; /* Azul do botão */
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box .box1 a:hover {
+    background-color: #4068c8;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
