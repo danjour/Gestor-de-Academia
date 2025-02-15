@@ -3,8 +3,14 @@ import sqlite3
 from threading import local
 from datetime import datetime
 import hashlib
+import os
+from db import *
+
+SECRET_KEY = os.urandom(24)
 
 app = Flask(__name__)
+
+app.secret_key = SECRET_KEY
 
 thread_local = local()
 
@@ -14,7 +20,7 @@ def get_connection():
     Ensures each thread gets its own connection.
     """
     if not hasattr(thread_local, "connection"):
-        thread_local.connection = sqlite3.connect(r"C:\Users\eduar\Documents\GitHub\Gestor-de-Academia\remina.db", check_same_thread=False)
+        thread_local.connection = connect_db("REMINA")
         thread_local.connection.row_factory = sqlite3.Row 
     return thread_local.connection
 
@@ -46,7 +52,7 @@ def addclient_payment():
         email = data.get('email')
         phone = data.get('phone')
         gender = data.get('gender')
-        gender_other = data.get('gender-other', '')  # Default to empty if not provided
+        gender_other = data.get('gender-other', '')
         address = data.get('address')
         house = data.get('house')
         neighborhood = data.get('neighborhood')
@@ -103,11 +109,10 @@ def payment_page():
 @app.route('/finish_payment', methods=['GET', 'POST'])
 def finish_payment():
     if request.method == 'POST':
-        data = request.form  # Access form data
+        data = request.form 
         print(f"Form Data: {data}")
         client_hash = data.get('client_hash')
 
-        
         try:
             conn = get_connection()
             cursor = conn.cursor()
@@ -137,9 +142,6 @@ def finish_payment():
 
     else:
         return "Invalid Request Method", 405
-
-
-
 
 
 #For a while, it will be simple, but in the next step, it will become more complex as we put the database in a secure place.
